@@ -11,6 +11,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
+    @user=User.find_by(params[:username])
+    if @user
+      puts "cats"
+    end
 
   end
 
@@ -24,4 +28,3 @@ class ApplicationController < Sinatra::Base
 
 
 end
-
